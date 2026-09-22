@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,341 +6,279 @@
 
 <title>M TAJ Cloths</title>
 
+<meta name="description" content="M TAJ Cloths - Quality Clothes at Affordable Prices">
+
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
 body{
-  background:#080808;
-  color:white;
+    background:#f7f7f7;
+    color:#222;
 }
 
+/* HEADER */
 header{
-  background:#000;
-  padding:18px 6%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:1px solid #c9a227;
-  position:sticky;
-  top:0;
-  z-index:10;
+    background:#111;
+    color:white;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 .logo{
-  color:#d4af37;
-  font-size:26px;
-  font-weight:bold;
+    font-size:25px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#d4af37;
 }
 
 nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:18px;
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:15px;
 }
 
+nav a:hover{
+    color:#d4af37;
+}
+
+/* HERO */
 .hero{
-  text-align:center;
-  padding:70px 20px;
-  background:linear-gradient(135deg,#000,#211b08);
+    min-height:520px;
+    background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:30px;
 }
 
 .hero h1{
-  color:#d4af37;
-  font-size:42px;
-  margin-bottom:15px;
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.hero h1 span{
+    color:#d4af37;
 }
 
 .hero p{
-  font-size:18px;
-  color:#ddd;
+    font-size:20px;
+    margin-bottom:25px;
 }
 
 .btn{
-  display:inline-block;
-  margin-top:25px;
-  background:#d4af37;
-  color:#000;
-  padding:13px 25px;
-  border-radius:7px;
-  text-decoration:none;
-  font-weight:bold;
+    display:inline-block;
+    background:#d4af37;
+    color:#111;
+    padding:13px 25px;
+    border-radius:5px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:5px;
 }
 
-section{
-  padding:45px 6%;
+.btn:hover{
+    background:#fff;
 }
 
-.title{
-  text-align:center;
-  color:#d4af37;
-  font-size:30px;
-  margin-bottom:30px;
+/* SECTION */
+.section{
+    padding:55px 6%;
 }
 
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-title h2{
+    font-size:32px;
+}
+
+.section-title p{
+    color:#666;
+    margin-top:8px;
+}
+
+/* PRODUCTS */
 .products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:22px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
 }
 
 .product{
-  background:#151515;
-  border:1px solid #333;
-  border-radius:12px;
-  overflow:hidden;
-  text-align:center;
-  padding-bottom:20px;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 3px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-5px);
 }
 
 .product img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
+    width:100%;
+    height:280px;
+    object-fit:cover;
 }
 
-.product h3{
-  margin:15px 0 8px;
+.product-info{
+    padding:18px;
+    text-align:center;
+}
+
+.product-info h3{
+    margin-bottom:8px;
 }
 
 .price{
-  color:#d4af37;
-  font-size:20px;
-  font-weight:bold;
+    font-size:21px;
+    font-weight:bold;
+    color:#c59d20;
+    margin:10px 0;
 }
 
-.product button{
-  margin-top:15px;
-  padding:11px 20px;
-  border:0;
-  border-radius:6px;
-  background:#d4af37;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.order-box{
-  max-width:600px;
-  margin:auto;
-  background:#151515;
-  padding:25px;
-  border-radius:12px;
-  border:1px solid #333;
-}
-
-input,select,textarea{
-  width:100%;
-  padding:13px;
-  margin:8px 0 15px;
-  border-radius:6px;
-  border:1px solid #555;
-  background:#080808;
-  color:white;
-}
-
-textarea{
-  height:90px;
+.old-price{
+    text-decoration:line-through;
+    color:#888;
+    font-size:15px;
+    margin-right:7px;
 }
 
 .order-btn{
-  width:100%;
-  padding:14px;
-  background:#25D366;
-  color:white;
-  border:0;
-  border-radius:7px;
-  font-size:17px;
-  font-weight:bold;
-  cursor:pointer;
+    display:block;
+    background:#111;
+    color:white;
+    padding:11px;
+    text-decoration:none;
+    border-radius:5px;
+    margin-top:12px;
 }
 
+.order-btn:hover{
+    background:#d4af37;
+    color:#111;
+}
+
+/* ABOUT */
+.about{
+    background:white;
+    text-align:center;
+}
+
+.about p{
+    max-width:750px;
+    margin:auto;
+    line-height:1.8;
+    color:#555;
+}
+
+/* CONTACT */
+.contact{
+    background:#111;
+    color:white;
+    text-align:center;
+}
+
+.contact h2{
+    margin-bottom:15px;
+}
+
+.contact p{
+    margin:8px;
+}
+
+.whatsapp{
+    display:inline-block;
+    margin-top:20px;
+    background:#25D366;
+    color:white;
+    padding:14px 25px;
+    border-radius:5px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* FOOTER */
 footer{
-  text-align:center;
-  padding:25px;
-  background:#000;
-  border-top:1px solid #333;
-  color:#aaa;
+    background:#050505;
+    color:#aaa;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
 }
 
-.gold{
-  color:#d4af37;
+/* MOBILE */
+@media(max-width:700px){
+
+    header{
+        padding:15px 4%;
+    }
+
+    .logo{
+        font-size:20px;
+    }
+
+    nav a{
+        margin-left:8px;
+        font-size:12px;
+    }
+
+    .hero{
+        min-height:450px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section{
+        padding:40px 5%;
+    }
+
+    .product img{
+        height:250px;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-  <div class="logo">M TAJ Cloths</div>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="#order">Order</a>
-  </nav>
-</header>
-
-<section class="hero" id="home">
-  <h1>M TAJ Cloths</h1>
-  <p>Premium Clothes • Best Quality • Affordable Prices</p>
-
-  <a href="#products" class="btn">Shop Now</a>
-</section>
-
-<section id="products">
-
-  <h2 class="title">Our Products</h2>
-
-  <div class="products">
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=600&q=80">
-      <h3>Premium Shirt</h3>
-      <div class="price">Rs. 1,400</div>
-      <button onclick="selectProduct('Premium Shirt')">
-        Order Now
-      </button>
+    <div class="logo">
+        M TAJ <span>Cloths</span>
     </div>
 
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=600&q=80">
-      <h3>Classic Shirt</h3>
-      <div class="price">Rs. 1,200</div>
-      <button onclick="selectProduct('Classic Shirt')">
-        Order Now
-      </button>
-    </div>
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1610652492500-ded49ceeb378?auto=format&fit=crop&w=600&q=80">
-      <h3>Premium Dress</h3>
-      <div class="price">Rs. 2,400</div>
-      <button onclick="selectProduct('Premium Dress')">
-        Order Now
-      </button>
-    </div>
-
-  </div>
-
-</section>
-
-<section id="order">
-
-  <h2 class="title">Place Your Order</h2>
-
-  <div class="order-box">
-
-    <form onsubmit="sendOrder(event)">
-
-      <label>Your Name</label>
-      <input type="text" id="name" placeholder="Enter your name" required>
-
-      <label>Mobile Number</label>
-      <input type="tel" id="phone" placeholder="03XXXXXXXXX" required>
-
-      <label>Select Product</label>
-      <select id="product" required>
-        <option value="">Select a product</option>
-        <option>Premium Shirt</option>
-        <option>Classic Shirt</option>
-        <option>Premium Dress</option>
-      </select>
-
-      <label>Size</label>
-      <select id="size" required>
-        <option value="">Select size</option>
-        <option>Small (S)</option>
-        <option>Medium (M)</option>
-        <option>Large (L)</option>
-        <option>XL</option>
-        <option>XXL</option>
-      </select>
-
-      <label>Quantity</label>
-      <input type="number" id="quantity" value="1" min="1" required>
-
-      <label>Delivery Address</label>
-      <textarea id="address" placeholder="Enter your complete address" required></textarea>
-
-      <button class="order-btn" type="submit">
-        📲 Place Order on WhatsApp
-      </button>
-
-    </form>
-
-  </div>
-
-</section>
-
-<footer>
-  <p>© 2026 <span class="gold">M TAJ Cloths</span></p>
-  <p>Quality Clothes • Trusted Service</p>
-</footer>
-
-<script>
-
-function selectProduct(productName){
-
-  document.getElementById("product").value = productName;
-
-  document.getElementById("order").scrollIntoView({
-    behavior:"smooth"
-  });
-
-}
-
-function sendOrder(event){
-
-  event.preventDefault();
-
-  const name =
-    document.getElementById("name").value;
-
-  const phone =
-    document.getElementById("phone").value;
-
-  const product =
-    document.getElementById("product").value;
-
-  const size =
-    document.getElementById("size").value;
-
-  const quantity =
-    document.getElementById("quantity").value;
-
-  const address =
-    document.getElementById("address").value;
-
-  const message =
-`🛍️ NEW ORDER - M TAJ CLOTHS
-
-👤 Name: ${name}
-📱 Phone: ${phone}
-
-👕 Product: ${product}
-📏 Size: ${size}
-🔢 Quantity: ${quantity}
-
-📍 Delivery Address:
-${address}`;
-
-  const whatsappNumber = "923229942760";
-
-  const url =
-    "https://wa.me/" +
-    whatsappNumber +
-    "?text=" +
-    encodeURIComponent(message);
-
-  window.open(url,"_blank");
-
-}
-
-</script>
-
-</body>
-</html>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+   tle>
